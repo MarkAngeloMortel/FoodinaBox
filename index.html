@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Food in a Box | Bislig City</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css" media="screen" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico&display=swap' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style-portfolio.css">
+        <link rel="stylesheet" href="css/picto-foundry-food.css" />
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/mobile.css?v=5">
+        <link rel="stylesheet" href="css/polish.css?v=5">
+        <link rel="stylesheet" href="css/motion.css?v=1">
+        <link rel="icon" href="favicon-1.ico" type="image/x-icon">
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="row">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img class="brand-logo" src="images/logo.png" alt="Food in a Box logo">Food in a Box</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav main-nav  clear navbar-right ">
+                            <li><a class="navactive color_animation" href="#top">WELCOME</a></li>
+                            <li><a class="color_animation" href="#story">ABOUT</a></li>
+                            <li><a class="color_animation" href="#menu">MENU</a></li>
+                            <li><a class="color_animation" href="#beer">DRINKS</a></li>
+                            <li><a class="color_animation" href="#reviews">REVIEWS</a></li>
+                            <li><a class="color_animation" href="#featured">SERVICES</a></li>
+                            <li><a class="color_animation" href="#reservation">RESERVATION</a></li>
+                            <li><a class="color_animation" href="#contact">CONTACT</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+            </div><!-- /.container-fluid -->
+        </nav>
+         
+        <div id="top" class="starter_container bg">
+            <div class="follow_container">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="top-title"> Food in a Box</h2>
+                    <h2 class="white second-title">" Best in the city "</h2>
+                    <hr>
+                    <div class="hero-cta">
+                        <a class="hero-btn hero-btn-primary" href="#menu-items" data-nav="#menu">View Menu</a>
+                        <a class="hero-btn hero-btn-secondary" href="#reservation-form" data-nav="#reservation">Reserve a Table</a>
+                        <a class="hero-btn hero-btn-secondary hero-btn-call" href="tel:+639317355526">Call Us</a>
+                    </div>
+                    <div class="info-chips"><span>Dine-in</span><span>Takeout</span><span>Delivery</span><span>₱1–500 per person</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ About Us ============= -->
+        <section id="story" class="description_content">
+            <div class="text-content container">
+                <div class="col-md-6">
+                    <h1>About us</h1>
+                    <div class="fa fa-cutlery fa-2x"></div>
+                    <p class="desc-text">Food in a Box is an eclectic restaurant on Barreda St in Bislig City, Surigao del Sur. Rice boxes, silog breakfasts, sizzling plates, pasta, burgers, café drinks and more in a cozy, casual space. With meals at ₱1–500 per person, it's a friendly spot for breakfast, lunch, dinner or a quick coffee. Dine in, take out or have it delivered.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-section">
+                       <img loading="lazy" decoding="async" src="images/about-satay.jpg" width="250" height="220" alt="Grilled pork skewers">
+                       <img loading="lazy" decoding="async" src="images/about-squid.jpg" width="250" height="220" alt="Grilled squid">
+                       <div class="img-section-space"></div>
+                       <img loading="lazy" decoding="async" src="images/about-shrimp.jpg" width="250" height="220" alt="Crispy fried shrimp">
+                       <img loading="lazy" decoding="async" src="images/about-boxes.jpg" width="250" height="220" alt="Food in a Box sharing platter">
+                   </div>
+                </div>
+            </div>
+        </section>
+
+
+       <!-- ============ Pricing  ============= -->
+
+
+        <section id="menu" class="description_content">
+             <div class="pricing background_content">
+                
+             </div>
+            <div id="menu-items" class="text-content container"> 
+                <div class="container">
+                    <div class="row">
+                        <div id="w">
+                            <ul id="filter-list" class="clearfix" role="tablist" aria-label="Menu categories">
+<li class="filter active" role="tab" id="tab-breakfast" aria-controls="menu-panel" aria-selected="true" tabindex="0" data-filter="breakfast">Breakfast</li>
+<li class="filter" role="tab" id="tab-mains" aria-controls="menu-panel" aria-selected="false" tabindex="-1" data-filter="mains">Mains</li>
+<li class="filter" role="tab" id="tab-starters" aria-controls="menu-panel" aria-selected="false" tabindex="-1" data-filter="starters">Starters &amp; Noodles</li>
+<li class="filter" role="tab" id="tab-combos" aria-controls="menu-panel" aria-selected="false" tabindex="-1" data-filter="combos">Combos</li>
+<li class="filter" role="tab" id="tab-snacks" aria-controls="menu-panel" aria-selected="false" tabindex="-1" data-filter="snacks">Snacks</li>
+<li class="filter" role="tab" id="tab-drinks" aria-controls="menu-panel" aria-selected="false" tabindex="-1" data-filter="drinks">Drinks &amp; Desserts</li>
+                            </ul><!-- @end #filter-list -->    
+                            <div id="menu-panel" class="menu-panel" role="tabpanel" aria-labelledby="tab-breakfast" tabindex="0">
+                            <h2 id="menu-section-title" class="menu-section-title" aria-live="polite">Breakfast</h2>
+                            <ul id="portfolio">
+<li class="item breakfast"><img loading="lazy" decoding="async" src="images/menu/breakfast.jpg" alt="Breakfast plate with sliced cured meat, a sunny-side-up egg, white rice and a ketchup dip on a dark plate"><div class="tile-body"><h2 aria-level="3">All-day Breakfast</h2><p class="tile-desc">Classic breakfast plates, served any time</p></div></li>
+<li class="item breakfast"><img loading="lazy" decoding="async" src="images/menu/silog.jpg" alt="Garlic rice, a fried egg and a crispy fried fillet topped with chili and green onion, with cucumber slices and dipping sauce"><div class="tile-body"><h2 aria-level="3">Silog Meals</h2><p class="tile-desc">Garlic rice and egg with your choice of meat</p></div></li>
+<li class="item breakfast"><img loading="lazy" decoding="async" src="images/menu/hungarian.jpg" alt="Grilled Hungarian sausage with crispy bacon, a fried egg, rice and tomato slices on a gray plate"><div class="tile-body"><h2 aria-level="3">Sausage Meals</h2><p class="tile-desc">Grilled Hungarian sausage plates, hearty and smoky</p></div></li>
+<li class="item mains"><img loading="lazy" decoding="async" src="images/menu/pork.jpg" alt="Sliced crispy pork belly in dark shrimp-paste sauce, topped with a red chili and greens"><div class="tile-body"><h2 aria-level="3">Pork</h2><p class="tile-desc">Pork dishes made for sharing over rice</p></div></li>
+<li class="item mains"><img loading="lazy" decoding="async" src="images/menu/inasal.jpg" alt="Grilled chicken inasal leg on a banana leaf with sesame-topped rice and cherry tomatoes"><div class="tile-body"><h2 aria-level="3">Inasal</h2><p class="tile-desc">Chicken inasal, grilled and flavorful</p></div></li>
+<li class="item mains"><img loading="lazy" decoding="async" src="images/menu/chicken.jpg" alt="Chicken in a golden-green sauce with leafy greens and sliced red chilies on a white plate"><div class="tile-body"><h2 aria-level="3">Chicken</h2><p class="tile-desc">Chicken favorites, fried or sauced</p></div></li>
+<li class="item mains"><img loading="lazy" decoding="async" src="images/menu/buffalo.jpg" alt="Glossy red buffalo wings served with celery sticks on a white plate"><div class="tile-body"><h2 aria-level="3">Buffalo Wings</h2><p class="tile-desc">Wings tossed in tangy buffalo sauce</p></div></li>
+<li class="item mains"><img loading="lazy" decoding="async" src="images/menu/seafood.jpg" alt="Fresh seafood salad with cucumber, lime slices and a red chili, served with white radish strips"><div class="tile-body"><h2 aria-level="3">Seafood</h2><p class="tile-desc">Seafood plates, fresh from the grill and fryer</p></div></li>
+<!-- <li class="item mains"><img loading="lazy" decoding="async" src="images/menu/veg.jpg" alt="Vegetables"><h2>Vegetables</h2></li> -->
+<!-- <li class="item mains"><img loading="lazy" decoding="async" src="images/menu/soup.jpg" alt="Soup"><h2>Soup</h2></li> -->
+<!-- <li class="item mains"><img loading="lazy" decoding="async" src="images/menu/rice.jpg" alt="Rice"><h2>Rice</h2></li> -->
+<!-- <li class="item mains"><img loading="lazy" decoding="async" src="images/menu/alacarte.jpg" alt="Ala Carte"><h2>Ala Carte</h2></li> -->
+<li class="item starters"><img loading="lazy" decoding="async" src="images/menu/appetizer.jpg" alt="Crispy fried calamari rings arranged in a ring around a pink dipping sauce on a dark plate"><div class="tile-body"><h2 aria-level="3">Appetizer</h2><p class="tile-desc">Small plates to start the meal</p></div></li>
+<li class="item starters"><img loading="lazy" decoding="async" src="images/menu/noodles.jpg" alt="Stir-fried noodles with carrot and green bean strips and calamansi on a white plate"><div class="tile-body"><h2 aria-level="3">Noodles</h2><p class="tile-desc">Stir-fried and soupy noodle bowls</p></div></li>
+<li class="item starters"><img loading="lazy" decoding="async" src="images/menu/palabok.jpg" alt="Rice noodles in orange shrimp sauce with ground toppings, green onion and calamansi on an oval plate"><div class="tile-body"><h2 aria-level="3">Palabok Series</h2><p class="tile-desc">Noodles in rich shrimp sauce with toppings</p></div></li>
+<li class="item combos"><img loading="lazy" decoding="async" src="images/menu/china.jpg" alt="China box meal with fried chicken, battered shrimp, rice, noodles and a dipping sauce in a black box"><div class="tile-body"><h2 aria-level="3">China Box</h2><p class="tile-desc">Chinese-style rice meals in a box</p></div></li>
+<li class="item combos"><img loading="lazy" decoding="async" src="images/menu/fun.jpg" alt="Boxed meal with a club sandwich, spring rolls, fried chicken and a cup of dipping sauce"><div class="tile-body"><h2 aria-level="3">Fun in a Box</h2><p class="tile-desc">A fun mix of favorites in one box</p></div></li>
+<li class="item combos"><img loading="lazy" decoding="async" src="images/menu/family.jpg" alt="Family meal spread with a bowl of soup, fried chicken, stir-fried noodles and a bottle of cola"><div class="tile-body"><h2 aria-level="3">Family Meal</h2><p class="tile-desc">Big servings for the whole table</p></div></li>
+<li class="item combos"><img loading="lazy" decoding="async" src="images/menu/kiddie.jpg" alt="Kid-size combo baskets with fries, a mini burger and chocolate soft-serve cups"><div class="tile-body"><h2 aria-level="3">Kiddie Combo Box</h2><p class="tile-desc">Kid-size meals in a combo box</p></div></li>
+<li class="item snacks"><img loading="lazy" decoding="async" src="images/menu/burger.jpg" alt="Cheeseburger with a pile of fries and an iced tea on a wooden board"><div class="tile-body"><h2 aria-level="3">Burger &amp; Fries</h2><p class="tile-desc">Juicy burgers with a side of fries</p></div></li>
+<li class="item snacks"><img loading="lazy" decoding="async" src="images/menu/bun.jpg" alt="Wire baskets of filled buns topped with sauce against a red background"><div class="tile-body"><h2 aria-level="3">Bun in a Box</h2><p class="tile-desc">Buns with filling, boxed to go</p></div></li>
+<li class="item snacks"><img loading="lazy" decoding="async" src="images/menu/sizzler.jpg" alt="Sizzling plate of cheese sauce topped with sliced buns, served on a red wooden board"><div class="tile-body"><h2 aria-level="3">Smooky Sizzlers</h2><p class="tile-desc">Sizzling plates served piping hot</p></div></li>
+<li class="item drinks"><img loading="lazy" decoding="async" src="images/menu/dessert.jpg" alt="Halo-halo dessert with purple ube ice cream, sweet beans and leche flan in a tall glass"><div class="tile-body"><h2 aria-level="3">Desserts</h2><p class="tile-desc">Sweet treats to finish your meal</p></div></li>
+<li class="item drinks"><img loading="lazy" decoding="async" src="images/menu/sundae.jpg" alt="Green matcha and chocolate soft-serve sundaes in paper cups"><div class="tile-body"><h2 aria-level="3">Sundae Series</h2><p class="tile-desc">Ice cream sundaes with sweet toppings</p></div></li>
+<li class="item drinks"><img loading="lazy" decoding="async" src="images/menu/cafe.jpg" alt="Strawberry iced drink, a chocolate-drizzled iced coffee with whipped cream, and a hot latte in a glass mug"><div class="tile-body"><h2 aria-level="3">FIAB Cafe: Espresso &amp; Coffee</h2><p class="tile-desc">Espresso drinks and coffee, hot or iced</p></div></li>
+                            </ul><!-- @end #portfolio -->
+                            </div><!-- @end #menu-panel -->
+                        </div><!-- @end #w -->
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+
+        <!-- ============ Our Beer  ============= -->
+
+
+        <section id ="beer" class="description_content">
+            <div  class="beer background_content">
+                <h1>Great <span>Place</span> to enjoy</h1>
+            </div>
+            <div class="text-content container"> 
+                <div class="col-md-5">
+                   <ul class="image_box_story2">
+                       <div id="carousel-drinks" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false">
+                           <!-- Indicators -->
+                           <ol class="carousel-indicators">
+                               <li data-target="#carousel-drinks" data-slide-to="0" class="active"></li>
+                               <li data-target="#carousel-drinks" data-slide-to="1"></li>
+                               <li data-target="#carousel-drinks" data-slide-to="2"></li>
+                           </ol>
+
+                           <!-- Wrapper for slides -->
+                           <div class="carousel-inner">
+                               <div class="item active">
+                                   <img class="slide-img" loading="lazy" decoding="async" src="images/drink.jpg" alt="Iced chocolate drink with whipped cream" style="object-position:center 70%;">
+                                   <div class="carousel-caption"></div>
+                               </div>
+                               <div class="item">
+                                   <img class="slide-img" loading="lazy" decoding="async" src="images/drink-matcha.jpg" alt="Food in a Box matcha iced drink">
+                                   <div class="carousel-caption"></div>
+                               </div>
+                               <div class="item">
+                                   <img class="slide-img" loading="lazy" decoding="async" src="images/drink-coffee.jpg" alt="Strawberry frappe with whipped cream">
+                                   <div class="carousel-caption"></div>
+                               </div>
+                           </div>
+                       </div>
+                   </ul>
+                </div>
+                <br>
+                <div class="col-md-6 col-md-offset-1">
+                    <h1>Coffee &amp; Drinks</h1>
+                    <div class="icon-beer fa-2x"></div>
+                    <p class="desc-text">Known for great coffee, a good tea selection, great cocktails and great desserts. Beer and happy hour food are on offer too. Settle in at a wooden table, order a quick bite or small plates, and enjoy the cozy, casual atmosphere.</p>
+                </div>
+            </div>
+        </section>
+
+
+       <!-- ============ Our Bread  ============= -->
+
+
+        <section id="reviews" class=" description_content">
+            <div  class="bread background_content">
+                <h1>What Guests <span>Say</span></h1>
+            </div>
+            <div class="text-content container"> 
+                <div class="col-md-6">
+                    <h1>Reviews</h1>
+                    <div class="fa fa-star fa-2x"></div>
+                    <div class="rating-summary"><div class="rating-score">4.6</div><div class="rating-meta"><div class="rating-stars" role="img" aria-label="Rated 4.6 out of 5 stars"><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span><span class="star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span><span class="star star-part"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z"/></svg></span></div><div class="rating-count">out of 5 &middot; 105 Google reviews</div></div></div><p class="desc-text rating-blurb">Guests often mention affordable food, large servings and accommodating staff.</p>
+                    <a class="google-link" href="https://www.google.com/maps/search/?api=1&amp;query=Food+in+a+Box+Barreda+St+Bislig+Surigao+del+Sur" target="_blank" rel="noopener">Read reviews on Google <span aria-hidden="true">&rarr;</span></a>
+                </div>
+                <div class="col-md-6">
+                    <div id="carousel-reviews" class="carousel slide review-slider carousel-fade carousel-fade-text" data-ride="carousel" data-interval="3000" data-pause="false">
+                        <div class="carousel-inner">
+                                <div class="item active">
+                                    <blockquote class="review-card"><p class="review-text">We had breakfast at Food in a Box in Mangagoy, and it was truly a wonderful experience.</p><footer class="review-author"><b>ricky bernardino</b><span>Local Guide</span></footer></blockquote>
+                                    <blockquote class="review-card"><p class="review-text">Food in a Box is an absolutely fantastic place! The food is not just delicious, it's an explosion of flavors that leaves you wanting more.</p><footer class="review-author"><b>Daniel</b><span>Local Guide</span></footer></blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote class="review-card"><p class="review-text">I like the place, also very cheap food. They accept credit card there! Yes, that's what amaze me since I live in cash money haha. Anyway, the atmosphere there is very nice, tho it get loud sometimes when the place is full.</p><footer class="review-author"><b>Liej Alba</b><span>Local Guide</span></footer></blockquote>
+                                    <blockquote class="review-card"><p class="review-text">Okay and wide selection of food. Give it a try when you visit Bislig.</p><footer class="review-author"><b>John Andrew Senorin</b><span>Local Guide</span></footer></blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote class="review-card"><p class="review-text">Food in a Box never failed us! Food tastes great! Their carbonara is the bomb! It’s a must try! We stayed in Mangagoy for 4 days and has been eating in their resto most of the time.</p><footer class="review-author"><b>Jasmine M</b><span>Local Guide</span></footer></blockquote>
+                                    <blockquote class="review-card"><p class="review-text">Best place to chill, relax and dine with your friends and family. Sinigang is the best!</p><footer class="review-author"><b>Alfred James Coquilla</b><span>Local Guide</span></footer></blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote class="review-card"><p class="review-text">Masarap ang sisig at buttered fried chicken nila. Superb. Kaso bitin ang rice na nasa platter nila good for 2 person lang huhuhu. Pero masasarap ang lasa ng food nila. Will go back here again.</p><footer class="review-author"><b>Tranquil Thrive</b><span>Local Guide</span></footer></blockquote>
+                                    <blockquote class="review-card"><p class="review-text">Food is very tasty. The staff are very polite and accommodating.</p><footer class="review-author"><b>ella la</b><span>Local Guide</span></footer></blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote class="review-card"><p class="review-text">This place is a find in Mangagoy, delicious food, wide variety of food items. The combo meal has a large serving at an affordable price. Clean place to eat. Highly recommended when in Mangagoy or Bislig.</p><footer class="review-author"><b>Randle Santos</b><span>Local Guide</span></footer></blockquote>
+                                    <blockquote class="review-card"><p class="review-text">Great food! Service is amazing! Will definitely eat here again soon as i visit.</p><footer class="review-author"><b>Jr Queltaden</b><span>Local Guide</span></footer></blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote class="review-card"><p class="review-text">Simple yet elegant. The food is also delicious. My wife loves to eat here. If you're not allergic with shrimps, you may try their sizzling gambas.</p><footer class="review-author"><b>Eric Labastilla</b><span>Local Guide</span></footer></blockquote>
+                                    <blockquote class="review-card"><p class="review-text">Excellent food and service! I have to try this once more before I leave Bislig.</p><footer class="review-author"><b>Christopher Orion</b><span>Local Guide</span></footer></blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote class="review-card"><p class="review-text">It was an awesome time spent! I admire the staff, the location is very accessible. Coffee, ooh, I love the most.</p><footer class="review-author"><b>Honey Pardillo</b><span>Local Guide</span></footer></blockquote>
+                                    <blockquote class="review-card"><p class="review-text">First time to eat in this place. All I can say is that their food are all masarap and affordable.</p><footer class="review-author"><b>Charmaine Jaye Aton</b><span>Local Guide</span></footer></blockquote>
+                                </div>
+                                <div class="item">
+                                    <blockquote class="review-card"><p class="review-text">The staff are accommodating, venue is nice, they have this “pungko” style tables and the food is so good.</p><footer class="review-author"><b>Norman Neri</b><span>Local Guide</span></footer></blockquote>
+                                    <blockquote class="review-card"><p class="review-text">Taste! Kinalaw, buffalo wings dynamite, palabok, gamas sisig, fish fillet and vegetables with kawali, fries and spag for my son, all delicious. Thanks!</p><footer class="review-author"><b>Bernard “BuRn” Casanova</b><span>Local Guide</span></footer></blockquote>
+                                </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        
+        <!-- ============ Featured Dish  ============= -->
+
+        <section id="featured" class="description_content">
+            <div  class="featured background_content">
+                <h1>Good for <span>Everyone</span></h1>
+            </div>
+            <div class="text-content container"> 
+                <div class="col-md-6">
+                    <h1>Dine-in, Takeout &amp; Delivery</h1>
+                    <div class="icon-fork-knife fa-2x"></div>
+                    <p class="desc-text">Popular for breakfast, lunch, dinner and solo dining. Good for groups, college students and kids, with vegetarian and vegan options. Outdoor seating, free parking, and a wheelchair accessible entrance, restroom and seating. Cards and mobile payments accepted; reservations recommended.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="image_box_story2">
+                        <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-img" loading="lazy" decoding="async" src="images/service-squid.jpg" alt="Grilled squid with corn salsa">
+                                    <div class="carousel-caption">
+                                        
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img class="slide-img" loading="lazy" decoding="async" src="images/service-silog.jpg" alt="Crispy pork sisig with rice">
+                                    <div class="carousel-caption">
+                                        
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <img class="slide-img" loading="lazy" decoding="async" src="images/service-pizza.jpg" alt="Pepperoni and bacon pizza">
+                                    <div class="carousel-caption">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Reservation  ============= -->
+
+        <section  id="reservation"  class="description_content">
+            <div class="featured background_content">
+                <h1>Reserve a Table!</h1>
+            </div>
+            <div id="reservation-form" class="text-content container"> 
+                <div class="inner contact">
+                    <!-- Form Area -->
+                    <div class="contact-form">
+                        <!-- Form -->
+                        <form id="contact-us" method="post" action="reserve.php">
+                            <!-- Left Inputs -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-6 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-xs-6">
+                                                <!-- Name -->
+                                                <input type="text" name="first_name" id="first_name" required="required" class="form" placeholder="First Name" />
+                                                <input type="text" name="last_name" id="last_name" required="required" class="form" placeholder="Last Name" />
+                                                <input type="text" name="state" id="state" required="required" class="form" placeholder="Time" />
+                                                <input type="text" name="datepicker" id="datepicker" required="required" class="form" placeholder="Reservation Date" />
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-xs-6">
+                                                <!-- Name -->
+                                                <input type="text" name="phone" id="phone" required="required" class="form" placeholder="Phone" />
+                                                <input type="text" name="guest" id="guest" required="required" class="form" placeholder="Guest Number" />
+                                                <input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />
+                                                <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                                            </div>
+
+                                            <div class="col-xs-6 ">
+                                                <!-- Send Button -->
+                                                <button type="submit" id="submit" name="submit" class="text-center form-btn form-btn">Reserve</button> 
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-4 col-md-6 col-xs-12">
+                                        <!-- Message -->
+                                        <div class="right-text">
+                                            <h2>Hours</h2><hr>
+                                            <p>Monday: Opens 9:00 AM</p>
+                                            <p>Sunday: Closed</p>
+                                            <p>Dine-in · Takeout · Delivery</p>
+                                            <p>₱1–500 per person</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Clear -->
+                            <div class="clear"></div>
+                        </form>
+                    </div><!-- End Contact Form Area -->
+                </div><!-- End Inner -->
+            </div>
+        </section>
+
+        <!-- ============ Social Section  ============= -->
+      
+        <section class="social_connect">
+            <div class="contact_bar">
+                <div class="contact_row">
+                
+                <a class="contact_item" href="tel:+639317355526">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+                    <span>0931 735 5526</span>
+                </a>
+                <a class="contact_item" href="mailto:paulamae1001@yahoo.com.ph">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 6.5l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+                    <span>paulamae1001@yahoo.com.ph</span>
+                </a>
+                <a class="contact_item" href="https://www.instagram.com/foodinabox_resto/" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
+                    <span>FOOD IN A BOX RESTAURANT</span>
+                </a>
+                </div>
+                <div class="contact_row">
+                <a class="contact_item" href="https://www.tiktok.com/@foodinabox_19" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 3h-3.2v12.3a2.7 2.7 0 1 1-2.7-2.7c.3 0 .6 0 .8.1V9.4a6 6 0 0 0-.8-.1 5.9 5.9 0 1 0 5.9 5.9V8.9a7.4 7.4 0 0 0 4.3 1.4V7.1A4.3 4.3 0 0 1 16.6 3z" fill="currentColor"/></svg>
+                    <span>FOOD IN A BOX</span>
+                </a>
+                <a class="contact_item" href="https://www.facebook.com/foodboxobsession" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z" fill="currentColor"/></svg>
+                    <span>Food in a Box</span>
+                </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Contact Section  ============= -->
+
+        <section id="contact">
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=Food+in+a+Box,+Barreda+St,+Bislig,+Surigao+del+Sur&output=embed" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="inner contact">
+                            <p class="desc-text text-center">Barreda St, City of Bislig, Surigao del Sur · 59P4+MQ City of Bislig</p>
+                            <!-- Form Area -->
+                            <div class="contact-form">
+                                <!-- Form -->
+                                <form id="contact-us" method="post" action="contact.php">
+                                    <!-- Left Inputs -->
+                                    <div class="col-md-6 ">
+                                        <!-- Name -->
+                                        <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                                        <!-- Email -->
+                                        <input type="email" name="email" id="email" required="required" class="form" placeholder="Email" />
+                                        <!-- Subject -->
+                                        <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
+                                    </div><!-- End Left Inputs -->
+                                    <!-- Right Inputs -->
+                                    <div class="col-md-6">
+                                        <!-- Message -->
+                                        <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                                    </div><!-- End Right Inputs -->
+                                    <!-- Bottom Submit -->
+                                    <div class="relative fullwidth col-xs-12">
+                                        <!-- Send Button -->
+                                        <button type="submit" id="submit" name="submit" class="form-btn">Send Message</button> 
+                                    </div><!-- End Bottom Submit -->
+                                    <!-- Clear -->
+                                    <div class="clear"></div>
+                                </form>
+                            </div><!-- End Contact Form Area -->
+                        </div><!-- End Inner -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Footer Section  ============= -->
+
+        <footer class="sub_footer">
+            <div class="container">
+                <div class="col-md-4"><p class="sub-footer-text text-center">&copy; 2026 Food in a Box. All rights reserved.</p></div>
+                <div class="col-md-4"><p class="sub-footer-text text-center">Barreda St, Bislig City, Surigao del Sur</p></div>
+                <div class="col-md-4"><p class="sub-footer-text text-center"><a href="#top">Back to top &uarr;</a></p></div>
+            </div>
+        </footer>
+
+
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"> </script>
+        <div class="mbar" role="navigation" aria-label="Quick actions">
+            <a class="mbar-link" href="tel:+639317355526"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>Call</a>
+            <a class="mbar-link" href="#menu-items" data-nav="#menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" fill="none"/></svg>Menu</a>
+            <a class="mbar-link" href="#reservation-form" data-nav="#reservation"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" fill="none"/></svg>Reserve</a>
+        </div>
+        <script type="text/javascript" src="js/bootstrap.min.js" ></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js" ></script>
+        <script type="text/javascript" src="js/main.js" ></script>
+        <script src="js/parallax.js?v=2"></script>
+        <script src="js/carousel-swipe.js"></script>
+        <script src="js/mobile-fx.js"></script>
+        <script src="js/motion.js?v=1"></script>
+
+    </body>
+</html>
