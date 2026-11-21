@@ -1,0 +1,121 @@
+/* ===== Motion: carousels, hamburger, navbar, bottom bar, scroll offset (loads last) ===== */
+:root{
+  --nav-h:70px;                                  /* kept in sync with the real navbar height by js/motion.js */
+  --ease:cubic-bezier(.4,0,.2,1);
+  --ease-out:cubic-bezier(.22,.8,.3,1);
+}
+
+/* ---------- Smooth scrolling: section links never land under the fixed navbar ---------- */
+html{scroll-padding-top:calc(var(--nav-h) + 10px)}   /* native fallback (hash on page load, keyboard, no-JS) */
+
+/* ---------- Carousels: crossfade instead of slide ---------- */
+/* Slides sit on top of each other; only opacity changes. Durations stay in seconds
+   because Bootstrap 3.2 reads transition-duration to know when the slide is done. */
+.carousel-fade .carousel-inner > .item,
+.carousel-fade .carousel-inner > .item.next,
+.carousel-fade .carousel-inner > .item.prev,
+.carousel-fade .carousel-inner > .item.active.left,
+.carousel-fade .carousel-inner > .item.active.right,
+.carousel-fade .carousel-inner > .item.next.left,
+.carousel-fade .carousel-inner > .item.prev.right{
+  left:0;
+  -webkit-transform:none;transform:none;
+}
+.carousel-fade .carousel-inner > .item{
+  opacity:0;
+  -webkit-transition:opacity .9s var(--ease);
+  transition:opacity .9s var(--ease);
+  will-change:opacity;
+}
+.carousel-fade .carousel-inner > .item.active{opacity:1}
+.carousel-fade .carousel-inner > .item.next,
+.carousel-fade .carousel-inner > .item.prev{opacity:0;z-index:2}
+.carousel-fade .carousel-inner > .item.next.left,
+.carousel-fade .carousel-inner > .item.prev.right{opacity:1}
+/* Photos: the incoming slide fades in over the outgoing one, so there is no dip to the background.
+   (.active keeps opacity:1 while it is being covered.) */
+
+/* Text slides (reviews): both cards fade, otherwise the two texts would overlap */
+.carousel-fade.carousel-fade-text .carousel-inner > .item.active.left,
+.carousel-fade.carousel-fade-text .carousel-inner > .item.active.right{opacity:0}
+.carousel-fade.carousel-fade-text .carousel-inner > .item{
+  -webkit-transition:opacity .7s var(--ease);
+  transition:opacity .7s var(--ease);
+}
+
+/* ---------- Hamburger morphs into an X ---------- */
+/* bars are children 2-4 of .navbar-toggle (child 1 is the .sr-only label) */
+.navbar-toggle .icon-bar{
+  -webkit-transform-origin:center;transform-origin:center;
+  -webkit-transition:transform .4s var(--ease),opacity .2s ease,background-color .3s ease;
+  transition:transform .4s var(--ease),opacity .2s ease,background-color .3s ease;
+}
+.navbar.nav-open .navbar-toggle .icon-bar:nth-child(2){-webkit-transform:translateY(6px) rotate(45deg);transform:translateY(6px) rotate(45deg)}
+.navbar.nav-open .navbar-toggle .icon-bar:nth-child(3){opacity:0;-webkit-transform:scaleX(0);transform:scaleX(0)}
+.navbar.nav-open .navbar-toggle .icon-bar:nth-child(4){-webkit-transform:translateY(-6px) rotate(-45deg);transform:translateY(-6px) rotate(-45deg)}
+
+/* ---------- Mobile menu: fade + slide in, links staggered ---------- */
+@media (max-width:767px){
+  .navbar-collapse.collapsing{-webkit-transition:height .4s var(--ease);transition:height .4s var(--ease)}
+  .navbar-collapse .main-nav{
+    opacity:0;-webkit-transform:translateY(-14px);transform:translateY(-14px);
+    -webkit-transition:opacity .3s ease,transform .4s var(--ease);
+    transition:opacity .3s ease,transform .4s var(--ease);
+  }
+  .navbar.nav-open .navbar-collapse .main-nav{opacity:1;-webkit-transform:none;transform:none}
+  .navbar-collapse .main-nav > li{
+    opacity:0;-webkit-transform:translateY(-8px);transform:translateY(-8px);
+    -webkit-transition:opacity .25s ease,transform .35s var(--ease-out);
+    transition:opacity .25s ease,transform .35s var(--ease-out);
+  }
+  .navbar.nav-open .navbar-collapse .main-nav > li{opacity:1;-webkit-transform:none;transform:none}
+  .navbar.nav-open .main-nav > li:nth-child(1){transition-delay:.05s}
+  .navbar.nav-open .main-nav > li:nth-child(2){transition-delay:.09s}
+  .navbar.nav-open .main-nav > li:nth-child(3){transition-delay:.13s}
+  .navbar.nav-open .main-nav > li:nth-child(4){transition-delay:.17s}
+  .navbar.nav-open .main-nav > li:nth-child(5){transition-delay:.21s}
+  .navbar.nav-open .main-nav > li:nth-child(6){transition-delay:.25s}
+  .navbar.nav-open .main-nav > li:nth-child(7){transition-delay:.29s}
+  .navbar.nav-open .main-nav > li:nth-child(8){transition-delay:.33s}
+}
+
+/* Small tablets (660-767px): the template pins the navbar at 70px, so the open menu spilled over the page.
+   Let the bar grow with the menu instead. */
+@media (min-width:660px) and (max-width:767px){
+  .navbar-fixed-top{height:auto!important;min-height:70px}
+}
+
+/* ---------- Navbar hides on scroll down, returns on scroll up ---------- */
+.navbar-fixed-top{
+  -webkit-transition:transform .4s var(--ease),box-shadow .3s ease;
+  transition:transform .4s var(--ease),box-shadow .3s ease;
+  will-change:transform;
+}
+.navbar-fixed-top.nav-hidden{-webkit-transform:translateY(-110%);transform:translateY(-110%);box-shadow:none}
+.navbar-fixed-top.nav-scrolled{box-shadow:0 2px 14px rgba(0,0,0,.35)}
+
+/* Active link underline fades instead of popping */
+.main-nav a{border-bottom:2px solid transparent;transition:color .3s ease-in-out,border-color .3s ease}
+.nav li a.navactive,.nav li a.navactive.color_animation{border-bottom-color:var(--accent)}
+
+/* ---------- Bottom bar: highlight the current section ---------- */
+@media (max-width:767px){
+  .mbar a{position:relative}
+  .mbar a svg{color:#8a8383;transition:color .25s ease,transform .3s var(--ease-out)}
+  .mbar a::before{
+    content:"";position:absolute;top:0;left:50%;width:40px;height:3px;border-radius:0 0 3px 3px;
+    background:var(--accent);
+    -webkit-transform:translateX(-50%) scaleX(0);transform:translateX(-50%) scaleX(0);
+    transition:transform .35s var(--ease-out);
+  }
+  .mbar a.is-active{color:var(--accent)!important}
+  .mbar a.is-active svg{color:var(--accent);-webkit-transform:translateY(-1px) scale(1.12);transform:translateY(-1px) scale(1.12)}
+  .mbar a.is-active::before{-webkit-transform:translateX(-50%) scaleX(1);transform:translateX(-50%) scaleX(1)}
+}
+
+/* ---------- Reduced motion: no sliding, no scroll animation, quick fades ---------- */
+@media (prefers-reduced-motion:reduce){
+  .carousel-fade .carousel-inner > .item,
+  .carousel-fade.carousel-fade-text .carousel-inner > .item{-webkit-transition-duration:.3s;transition-duration:.3s}
+  .navbar-fixed-top,.navbar-toggle .icon-bar,.navbar-collapse .main-nav,.navbar-collapse .main-nav > li{transition-duration:.01s!important;transition-delay:0s!important}
+}
